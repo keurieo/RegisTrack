@@ -4,21 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REGISTRACK</title>
+    <title>REGISTRACK</title> <!-- cspell:ignore REGISTRACK -->
 
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- link style file -->
     <link rel="stylesheet" href="/eventsphere/static/style/utility/base.css">
+    <style>
+       
+    </style>
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-eerie-black">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand text-floral-white" href="/">REGISTRACK</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+            <a class="navbar-brand text-floral-white" href="/">REGISTRACK</a> <!-- cspell:ignore REGISTRACK -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" title="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
@@ -42,15 +47,66 @@
     </nav>
 
     <!-- cover section -->
-    <div class="position-relative">
-        <img src="/eventsphere/static/images/hackathon-cover.jpg" class="img-fluid w-100 cover-image" alt="Hackathon Cover Image">
-        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-            <h1 class="display-3 fw-bold">Hackathon 2024</h1>
+    <div class="cover-section">
+        <img src="/eventsphere/static/images/cover-pic.jpg" class="img-fluid cover-image" alt="Hackathon Cover Image"> <!-- cspell:ignore Hackathon -->
+        <div class="content">
+            <h1 class="display-3 fw-bold">Hackathon 2024</h1> <!-- cspell:ignore Hackathon -->
             <h3 class="mt-3">March 15-17, 2024</h3>
             <p class="lead">Join us for 48 hours of coding, innovation, and collaboration</p>
             <a href="/register" class="btn btn-primary btn-lg mt-3">Register Now</a>
         </div>
     </div>
+
+    <!-- explore  -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <img src="/eventsphere/static/images/event1.jpg" class="card-img-top" alt="Event 1">
+                    <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                        <h5 class="card-title text-white">Event 1</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/eventsphere/static/images/event2.jpg" class="card-img-top" alt="Event 2">
+                    <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                        <h5 class="card-title text-white">Event 2</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/eventsphere/static/images/event3.jpg" class="card-img-top" alt="Event 3">
+                    <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                        <h5 class="card-title text-white">Event 3</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/eventsphere/static/images/event4.jpg" class="card-img-top" alt="Event 4">
+                    <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                        <h5 class="card-title text-white">Event 4</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/eventsphere/static/images/cover-pic.jpg" class="card-img-top" alt="Event 5">
+                    <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                        <h5 class="card-title text-white">Event 5</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        
+    </style>
 
     <!-- bootstrap js file -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
