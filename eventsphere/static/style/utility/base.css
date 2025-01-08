@@ -1,0 +1,73 @@
+:root {
+  --floral-white: #fffcf2ff;
+  --timberwolf: #ccc5b9ff;
+  --black-olive: #403d39ff;
+  --eerie-black: #252422ff;
+  --flame: #eb5e28ff;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Common utility classes */
+.bg-floral-white {
+  background-color: var(--floral-white);
+}
+
+.bg-timberwolf {
+  background-color: var(--timberwolf);
+}
+
+.bg-black-olive {
+  background-color: var(--black-olive);
+}
+
+.bg-eerie-black {
+  background-color: var(--eerie-black);
+}
+
+.bg-flame {
+  background-color: var(--flame);
+}
+
+.text-floral-white {
+  color: var(--floral-white);
+}
+
+.text-timberwolf {
+  color: var(--timberwolf);
+}
+
+.text-black-olive {
+  color: var(--black-olive);
+}
+
+.text-eerie-black {
+  color: var(--eerie-black);
+}
+
+.text-flame {
+  color: var(--flame);
+}
+
+/* Default body styles */
+body {
+  background-color: var(--floral-white);
+  color: var(--eerie-black);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Update default font to Poppins */
+body {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+
