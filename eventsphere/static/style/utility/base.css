@@ -13,7 +13,17 @@
   box-sizing: border-box;
 }
 
-/* Common utility classes */
+/* Typography */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: var(--floral-white);
+  color: var(--eerie-black);
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+/* Utility Classes */
 .bg-floral-white {
   background-color: var(--floral-white);
 }
@@ -54,27 +64,7 @@
   color: var(--flame);
 }
 
-/* Default body styles */
-body {
-  background-color: var(--floral-white);
-  color: var(--eerie-black);
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-}
-
-/* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-/* Update default font to Poppins */
-body {
-  font-family: "Poppins", system-ui, -apple-system, sans-serif;
-}
-
-/* ai made up */
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
+/* Navbar */
 .navbar {
   padding: 1rem 2rem;
   background-color: #343a40;
@@ -97,6 +87,7 @@ body {
   color: #f8f9fa;
 }
 
+/* Cover Section */
 .cover-section {
   position: relative;
   background: linear-gradient(to bottom right, #343a40, #212529);
@@ -136,6 +127,7 @@ body {
   font-size: 1.25rem;
 }
 
+/* Buttons */
 .btn-primary {
   background-color: #007bff;
   border: none;
@@ -146,18 +138,50 @@ body {
   background-color: #0056b3;
 }
 
+/* Cards */
 .card {
   position: relative;
   overflow: hidden;
   border-radius: 0%;
 }
+
 .card-img-overlay {
   opacity: 0;
   border-radius: 0%;
   transition: opacity 0.3s ease;
 }
+
 .card:hover .card-img-overlay {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Smooth Hover Effects */
+.transition-overlay {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.transition-hover {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.card:hover .transition-overlay {
+  opacity: 0;
+}
+
+.card:hover .transition-hover {
+  opacity: 1;
+}
+
+/* Ensure Images are Aligned and Responsive */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Hover Content Styling */
+.hover-content {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
