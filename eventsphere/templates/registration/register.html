@@ -16,19 +16,29 @@
         }
         .card {
             border: none;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
         }
         .form-control {
-            border-radius: 8px;
+            border-radius: 4px;
+            height: 48px;
+            font-size: 1rem;
+        }
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: inline-block;
         }
         .btn-primary {
             background: #4caf50;
             border: none;
-            border-radius: 8px;
-            padding: 10px;
+            border-radius: 4px;
+            font-size: 1rem;
+            padding: 12px 20px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease;
         }
         .btn-primary:hover {
             background: #43a047;
@@ -43,39 +53,39 @@
         }
         h2 {
             font-weight: 600;
+            font-size: 1.8rem;
+            text-align: center;
         }
         .validation-text {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #d9534f;
             display: none;
-        }
-        .valid {
-            color: #5cb85c !important;
+            margin-top: 4px;
         }
     </style>
 </head>
 <body>
     <div class="container vh-100 d-flex justify-content-center align-items-center">
-        <div class="card p-4" style="width: 400px;">
-            <h2 class="text-center mb-4">Create an Account</h2>
+        <div class="card" style="width: 400px;">
+            <h2>Create an Account</h2>
             <form id="registerForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Full Name</label>
+                <div class="mb-4">
+                    <label for="name">Full Name</label>
                     <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email Address</label>
+                <div class="mb-4">
+                    <label for="email">Email Address</label>
                     <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
+                <div class="mb-4">
+                    <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" placeholder="Create a password" required>
                     <div class="validation-text" id="uppercase">Must include an uppercase letter</div>
                     <div class="validation-text" id="number">Must include a number</div>
                     <div class="validation-text" id="length">Must be at least 8 characters long</div>
                 </div>
-                <div class="mb-3">
-                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                <div class="mb-4">
+                    <label for="confirm-password">Confirm Password</label>
                     <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
                     <div class="validation-text" id="match">Passwords must match</div>
                 </div>
