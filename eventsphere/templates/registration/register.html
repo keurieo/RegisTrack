@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Registration Page</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #3a7bd5, #3a6073);
+            color: #333;
+        }
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-control {
+            border-radius: 8px;
+        }
+        .btn-primary {
+            background: #4caf50;
+            border: none;
+            border-radius: 8px;
+            padding: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #43a047;
+        }
+        a {
+            color: #4caf50;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-weight: 600;
+        }
+        .validation-text {
+            font-size: 0.9rem;
+            color: #d9534f;
+            display: none;
+        }
+        .valid {
+            color: #5cb85c !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="card p-4" style="width: 400px;">
+            <h2 class="text-center mb-4">Create an Account</h2>
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                    <div class="validation-text" id="uppercase">Must include an uppercase letter</div>
+                    <div class="validation-text" id="number">Must include a number</div>
+                    <div class="validation-text" id="length">Must be at least 8 characters long</div>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
+                    <div class="validation-text" id="match">Passwords must match</div>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+                <div class="text-center mt-3">
+                    <p>Already have an account? <a href="#">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Validation -->
+    <script>
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const uppercaseValidation = document.getElementById('uppercase');
+        const numberValidation = document.getElementById('number');
+        const lengthValidation = document.getElementById('length');
+        const matchValidation = document.getElementById('match');
+        const registerForm = document.getElementById('registerForm');
+
+        // Password validation
+        passwordInput.addEventListener('input', () => {
+            const value = passwordInput.value;
+            uppercaseValidation.style.display = value.match(/[A-Z]/) ? 'none' : 'block';
+            numberValidation.style.display = value.match(/\d/) ? 'none' : 'block';
+            lengthValidation.style.display = value.length >= 8 ? 'none' : 'block';
+        });
+
+        // Confirm password validation
+        confirmPasswordInput.addEventListener('input', () => {
+            matchValidation.style.display =
+                confirmPasswordInput.value === passwordInput.value ? 'none' : 'block';
+        });
+
+        // Prevent form submission if validations fail
+        registerForm.addEventListener('submit', (e) => {
+            const validations = document.querySelectorAll('.validation-text');
+            const hasErrors = Array.from(validations).some((v) => v.style.display === 'block');
+            if (hasErrors) {
+                e.preventDefault();
+                alert('Please fix the errors in the form.');
+            }
+        });
+    </script>
+</body>
+</html>
