@@ -1,9 +1,15 @@
+"""
+URL configuration for the Registrations app.
+"""
+
 from django.urls import path
 from . import views  # Import views from the same app
 
-app_name = 'Registrations'  # Optional: Set an app namespace
+APP_NAME = "Registrations"  # Optional: Set an app namespace
 
 urlpatterns = [
-    path('', views.index, name='index'),  # Example route
-    # Add other paths here
+    path("login/", views.login, name="login"),  # Example route
+    path(
+        "registration/", views.registration, name="registration"
+    ),  # Add other paths here
 ]
