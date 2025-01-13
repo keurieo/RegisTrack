@@ -1,3 +1,9 @@
+from django.urls import path
+from . import views  # Import views from the same app
 
-from django.urls import path, include
-from . import views
+app_name = 'Registrations'  # Optional: Set an app namespace
+
+urlpatterns = [
+    path('', views.index, name='index'),  # Example route
+    # Add other paths here
+]
