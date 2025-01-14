@@ -8,7 +8,7 @@ from . import views  # Import views from the same app
 APP_NAME = "Registrations"  # Optional: Set an app namespace
 
 urlpatterns = [
-    path("login/", views.login, name="login"),  # Example route
+    path("login/", views.login_user, name="login"),  # Example route
     path(
         "registration/", views.registration, name="registration"
     ),  # Add other paths here
