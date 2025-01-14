@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Login Page</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -31,7 +30,10 @@
             transition: all 0.3s ease;
         }
         .btn-primary:hover {
-            background: #5a4bd8;
+        .card-custom-width {
+            width: 350px;
+        }
+        .btn-primary:hover {
         }
         a {
             color: #6c5ce7;
@@ -46,14 +48,14 @@
         }
     </style>
 </head>
-<body>
+        <div class="card p-4 card-custom-width">
     <div class="container vh-100 d-flex justify-content-center align-items-center">
         <div class="card p-4" style="width: 350px;">
             <h2 class="text-center mb-4">Welcome Back</h2>
             <form>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter your username">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
@@ -156,15 +158,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         {% endif %}
-        
+
         
         <div class="card p-4" style="width: 350px;">
             <h2 class="text-center mb-4">Welcome Back</h2>
             <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                    <label for="text" class="form-label">Email address</label>
+                    <input type="text" class="form-control" id="text" name="username" placeholder="Enter your email">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
