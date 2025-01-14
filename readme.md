@@ -26,7 +26,7 @@ To install and run RegisTrack locally, follow these steps:
 
 1. ![Clone Icon](https://via.placeholder.com/20) Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/RegisTrack.git
+    git clone https://github.com/IrfanFathan/RegisTrack.git
     ```
 2. ![Navigate Icon](https://via.placeholder.com/20) Navigate to the project directory:
     ```bash
