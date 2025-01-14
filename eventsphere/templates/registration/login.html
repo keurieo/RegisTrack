@@ -147,6 +147,15 @@
 </head>
 <body>
     <div class="container vh-100 d-flex justify-content-center align-items-center">
+        {% if messages %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %}
+        
         <div class="card p-4" style="width: 350px;">
             <h2 class="text-center mb-4">Welcome Back</h2>
             <form method="post" action="{% url 'login' %}">
