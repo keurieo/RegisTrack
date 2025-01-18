@@ -174,7 +174,15 @@ body {
 .card:hover .transition-hover {
   opacity: 1;
 }
+.card-title {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  font-weight: bold;
+}
 
+.card-text {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+ 
+}
 /* Ensure Images are Aligned and Responsive */
 .object-fit-cover {
   object-fit: cover;
@@ -185,6 +193,9 @@ body {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 }
+
+
+
 
 .hero-section {
   position: relative;
