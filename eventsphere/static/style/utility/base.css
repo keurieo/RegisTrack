@@ -19,7 +19,7 @@
 body {
   background-color: var(--floral-white);
   color: var(--eerie-black);
-  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
 }
 
@@ -175,12 +175,12 @@ body {
   opacity: 1;
 }
 .card-title {
-  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: bold;
 }
 
 .card-text {
-  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   font-weight: 500;
 }
 /* Ensure Images are Aligned and Responsive */
