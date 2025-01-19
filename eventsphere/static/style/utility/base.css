@@ -239,69 +239,306 @@ body {
   padding: 0.75rem 1.5rem;
   border-radius: 50px;}
 
-  .timeline {
-    position: relative;
-    padding-left: 50px;
-  }
-  
+
+  /* timeline */
+  /* SVG Background for Modern Look */
+.timeline {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.svgrepo.com/show/477358/abstract-lines.svg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+/* Title Styling */
+.timeline-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #4caf50;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-item .timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item .timeline-icon i {
+  color: #fff;
+}
+
+.timeline-item .timeline-content {
+  margin-left: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.timeline-item .timeline-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.timeline-item .timeline-content p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.timeline-item .timeline-date {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Hover Effect for Icons */
+.timeline-item .timeline-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .timeline-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 40px;
-    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
   .timeline-item .timeline-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
   }
-  
+
   .timeline-item .timeline-content {
-    background-color: white;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    width: 80%;
+    margin-left: 0;
   }
-  
-  .timeline-item .timeline-content h3 {
-    color: #2c3e50;
-    font-size: 1.5rem;
-  }
-  
-  .timeline-item .timeline-content p {
-    color: #7f8c8d;
-  }
-  
-  .timeline-item .timeline-date {
-    font-size: 1rem;
-    color: #95a5a6;
-    margin-top: 10px;
-    font-weight: 500;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .timeline {
-      padding-left: 20px;
-    }
-    .timeline-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .timeline-item .timeline-icon {
-      margin-bottom: 10px;
-    }
-    .timeline-item .timeline-content {
-      width: 100%;
-    }
-  }
-  
+}
 
   
+/* Section Title Styling */
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #4caf50;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+/* Card Styling */
+.highlight-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .highlight-card {
+      margin-bottom: 20px;
+  }
+}
+/* Fixed Size for Cards */
+.fixed-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fixed-card .card-body {
+  flex-grow: 1;
+}
+
+/* Ensure all cards are the same height */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Section Title Styling */
+.section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #4caf50;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+  /* footer */
+  /* Footer Styling */
+footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Footer Title */
+.footer-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.footer-title:hover {
+  color: #4caf50;
+}
+
+/* Footer Links */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  color: #4caf50;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.social-icon {
+  background-color: #333;
+  border-radius: 50%;
+  padding: 12px;
+  margin-right: 12px;
+  font-size: 1.4rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Text Centered Section */
+.text-center p {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .footer-title {
+      font-size: 1.2rem;
+  }
+
+  .footer-links li a {
+      font-size: 1rem;
+  }
+
+  .social-icons {
+      justify-content: center;
+  }
+}

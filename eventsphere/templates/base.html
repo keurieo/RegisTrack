@@ -129,33 +129,15 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Hackathon Highlights Section -->
 <!-- Hackathon Highlights Section -->
 <section class="highlights-section py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-4">Hackathon Highlights</h2>
+        <h2 class="text-center mb-5 section-title">Hackathon Highlights</h2>
         <div class="row gx-4 gy-4">
             <div class="col-md-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <img src="{% static 'images/highlight-1.jpg' %}" class="card-img-top" alt="Keynote Speakers">
+                <div class="card highlight-card border-0 shadow-lg fixed-card">
+                    <img src="{% static 'images/speakers.jpg' %}" class="card-img-top" alt="Keynote Speakers">
                     <div class="card-body">
                         <h5 class="card-title">Keynote Speakers</h5>
                         <p class="card-text">Listen to industry leaders and innovators share their insights and experiences.</p>
@@ -163,8 +145,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <img src="{% static 'images/highlight-2.jpg' %}" class="card-img-top" alt="Workshops">
+                <div class="card highlight-card border-0 shadow-lg fixed-card">
+                    <img src="{% static 'images/workshop.jpg' %}" class="card-img-top" alt="Workshops">
                     <div class="card-body">
                         <h5 class="card-title">Workshops</h5>
                         <p class="card-text">Participate in hands-on workshops to learn new skills and technologies.</p>
@@ -172,8 +154,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <img src="{% static 'images/highlight-3.jpg' %}" class="card-img-top" alt="Networking">
+                <div class="card highlight-card border-0 shadow-lg fixed-card">
+                    <img src="{% static 'images/networking.jpg' %}" class="card-img-top" alt="Networking">
                     <div class="card-body">
                         <h5 class="card-title">Networking</h5>
                         <p class="card-text">Connect with fellow participants, mentors, and sponsors to expand your network.</p>
@@ -185,9 +167,10 @@
 </section>
 
 
-<!-- timeline  -->
-  <div class="container py-5">
-    <h1 class="text-center text-dark mb-5">Hackathon Timeline</h1>
+
+<!-- Timeline -->
+<div class="container py-5">
+    <h1 class="text-center text-dark mb-5 timeline-title">Hackathon Timeline</h1>
     <div class="row timeline">
       <div class="col-12 col-md-6 timeline-item">
         <div class="timeline-icon bg-primary text-white">
@@ -231,6 +214,16 @@
       </div>
     </div>
   </div>
+  
+
+
+
+
+
+
+
+
+
 
 
 
@@ -280,18 +273,17 @@
     </div>
 </section>
 
-
 <!-- Footer Section -->
-<footer class="bg-dark text-white py-4">
+<footer class="bg-dark text-white py-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 mb-3">
-                <h5>About REGISTRACK</h5>
+            <div class="col-md-4 mb-4">
+                <h5 class="footer-title">About REGISTRACK</h5>
                 <p>REGISTRACK is your go-to platform for all hackathon events. Join us to innovate, build, and compete in a collaborative environment.</p>
             </div>
-            <div class="col-md-4 mb-3">
-                <h5>Quick Links</h5>
-                <ul class="list-unstyled">
+            <div class="col-md-4 mb-4">
+                <h5 class="footer-title">Quick Links</h5>
+                <ul class="list-unstyled footer-links">
                     <li><a href="/" class="text-white">Home</a></li>
                     <li><a href="/events" class="text-white">Events</a></li>
                     <li><a href="/about" class="text-white">About</a></li>
@@ -299,22 +291,23 @@
                     <li><a href="{% url 'registration' %}" class="text-white">Register</a></li>
                 </ul>
             </div>
-            <div class="col-md-4 mb-3">
-                <h5>Contact Us</h5>
+            <div class="col-md-4 mb-4">
+                <h5 class="footer-title">Contact Us</h5>
                 <p>Email: info@registrack.com</p>
                 <p>Phone: +1 234 567 890</p>
                 <div class="social-icons">
-                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-        <div class="text-center mt-3">
+        <div class="text-center mt-4">
             <p>&copy; 2026 REGISTRACK. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
+
 
 <!-- FontAwesome Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
