@@ -13,7 +13,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return render(request, "base.html")  # Render the correct template
+            return redirect("home")  # Render the correct template
         else:
             messages.error(request, "Invalid username or password.")
             return render(request, "registration/login.html")  # Re-render login page with error
@@ -45,4 +45,7 @@ def logout(request):
     # Show a success message
     messages.success(request, "You have been logged out.")
     # Redirect to the login page
-    return redirect("login")
+    return redirect("home")
+
+def home(request):
+    return render(request, 'base.html')

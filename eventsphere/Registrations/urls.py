@@ -11,5 +11,6 @@ urlpatterns = [
     path("login/", views.login_user, name="login"),  # Example route
     path("registration/", views.registration, name="registration"),
     path("logout/", views.logout, name="logout"),  # Logout page
+    path("home/", views.home, name="home"),  # Home page
    
 ]
