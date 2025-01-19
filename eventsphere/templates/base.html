@@ -23,9 +23,7 @@
 <body>
 
 
-    <!-- Navigation Block -->
-    {% block navigation %}
-    {% endblock %}
+
 
  <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -47,8 +45,13 @@
                 </li>
             </ul>
             <div class="navbar-nav">
-                <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
-                <a class="nav-link text-white" href="{% url 'registration' %}">Register</a>
+                {% if user.is_authenticated %}
+                    <span class="nav-link text-white">Hello, {{ user.username }}</span>
+                    <a class="nav-link text-white" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                    <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
+                    <a class="nav-link text-white" href="{% url 'registration' %}">Register</a>
+                {% endif %}
             </div>
         </div>
     </div>

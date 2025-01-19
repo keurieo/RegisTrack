@@ -13,14 +13,11 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("home")  # Redirect to a home page or dashboard
-    
+            return render(request, "base.html")  # Render the correct template
         else:
             messages.error(request, "Invalid username or password.")
-            return render(request, "registration/login.html")
-     
-    else:
-        return render(request, "registration/login.html")
+            return render(request, "registration/login.html")  # Re-render login page with error
+    return render(request, "registration/login.html")  # Render login form for GET request
 
 
 def registration(request):
@@ -31,7 +28,8 @@ def registration(request):
             username = form.cleaned_data.get("username")
             messages.success(request, f"Account created for {username}!")
             auth_login(request, user)
-            return redirect("home")  # Redirect to a home page or dashboard
+            return render(request, 'Registrations/login/base.html')  # ✅ Correct, renders the template
+
         else:
             messages.error(
                 request, "Registration failed. Please correct the errors below."

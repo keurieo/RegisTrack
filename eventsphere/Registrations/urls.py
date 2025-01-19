@@ -9,7 +9,7 @@ APP_NAME = "Registrations"  # Optional: Set an app namespace
 
 urlpatterns = [
     path("login/", views.login_user, name="login"),  # Example route
-    path(
-        "registration/", views.registration, name="registration"
-    ),  # Add other paths here
+    path("registration/", views.registration, name="registration"),
+    # Add other paths here
+   
 ]
