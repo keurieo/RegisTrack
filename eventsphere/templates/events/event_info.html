@@ -1,0 +1,96 @@
+<!-- Event Information Page -->
+<section class="event-info py-5">
+    <div class="container">
+        <!-- Event Title & Intro -->
+        <div class="text-center mb-5">
+            <h1 class="event-title">Hackathon 2025: Innovate the Future</h1>
+            <p class="event-subtitle">Join us for a transformative experience of collaboration, innovation, and problem-solving.</p>
+        </div>
+
+        <!-- Event Details -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h3 class="section-title">Event Details</h3>
+                <ul class="list-unstyled event-details">
+                    <li><strong>Date:</strong> January 15-30, 2025</li>
+                    <li><strong>Location:</strong> Virtual & On-site at Tech Hub</li>
+                    <li><strong>Time:</strong> 9:00 AM - 6:00 PM</li>
+                    <li><strong>Registration Deadline:</strong> January 10, 2025</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <h3 class="section-title">Event Highlights</h3>
+                <ul class="list-unstyled">
+                    <li>Keynote speeches from industry leaders</li>
+                    <li>Hands-on workshops</li>
+                    <li>Networking opportunities with mentors and sponsors</li>
+                    <li>Exciting prizes and awards</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Speakers Section -->
+        <div class="speakers-section mb-5">
+            <h3 class="section-title text-center">Meet Our Speakers</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="speaker-card">
+                        <img src="{% static 'images/speaker1.jpg' %}" class="img-fluid rounded-circle" alt="Speaker 1">
+                        <h5 class="speaker-name">John Doe</h5>
+                        <p class="speaker-title">CEO of Tech Innovators</p>
+                        <p class="speaker-bio">John is a leading figure in the tech industry, known for his work in AI and machine learning.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="speaker-card">
+                        <img src="{% static 'images/speaker2.jpg' %}" class="img-fluid rounded-circle" alt="Speaker 2">
+                        <h5 class="speaker-name">Jane Smith</h5>
+                        <p class="speaker-title">Lead Engineer at Quantum Labs</p>
+                        <p class="speaker-bio">Jane specializes in quantum computing and has worked on several groundbreaking projects.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="speaker-card">
+                        <img src="{% static 'images/speaker3.jpg' %}" class="img-fluid rounded-circle" alt="Speaker 3">
+                        <h5 class="speaker-name">Emily White</h5>
+                        <p class="speaker-title">Founder of GreenTech</p>
+                        <p class="speaker-bio">Emily is an advocate for sustainable tech and has been a key figure in the green energy revolution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule Section -->
+        <div class="schedule-section mb-5">
+            <h3 class="section-title text-center">Event Schedule</h3>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h5>Phase 1: Registration</h5>
+                    <p>Sign up and form teams. Submit initial ideas.</p>
+                    <span class="event-date">Jan 15, 2025 - 9:00 AM</span>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5>Phase 2: Idea Pitch</h5>
+                    <p>Pitch your idea to the judges and get feedback.</p>
+                    <span class="event-date">Jan 20, 2025 - 10:00 AM</span>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5>Phase 3: Prototype Development</h5>
+                    <p>Work on your prototype, incorporating feedback.</p>
+                    <span class="event-date">Jan 25, 2025 - 9:00 AM</span>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5>Phase 4: Final Submission</h5>
+                    <p>Submit your final project for judging.</p>
+                    <span class="event-date">Jan 30, 2025 - 5:00 PM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Call to Action -->
+        <div class="text-center">
+            <a href="{% url 'registration' %}" class="btn btn-primary btn-lg">Register Now</a>
+        </div>
+    </div>
+</section>
