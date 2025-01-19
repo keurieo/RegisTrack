@@ -7,7 +7,7 @@ class Event(models.Model):
     date = models.DateTimeField()
     short_description = models.TextField()
     criteria = models.TextField()
-    image = models.ImageField(upload_to='event_images/')
+   
     organizer = models.CharField(max_length=100)
     contact_email = models.EmailField()
     max_attendees = models.PositiveIntegerField()
