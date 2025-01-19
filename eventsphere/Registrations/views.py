@@ -40,6 +40,9 @@ def registration(request):
 
 
 def logout(request):
+    # Log the user out
     auth_logout(request)
+    # Show a success message
     messages.success(request, "You have been logged out.")
-    return redirect("login")  # Redirect to the login page
+    # Redirect to the login page
+    return redirect("login")
