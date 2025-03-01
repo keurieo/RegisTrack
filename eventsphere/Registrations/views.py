@@ -4,7 +4,7 @@ from django.contrib.auth import login as auth_login, authenticate, logout as aut
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-
+from Events.urls import urlpatterns
 
 def login_user(request):
     if request.method == "POST":
@@ -13,7 +13,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("home")  # Render the correct template
+            return redirect("")  # Render the correct template
         else:
             messages.error(request, "Invalid username or password.")
             return render(request, "registration/login.html")  # Re-render login page with error
